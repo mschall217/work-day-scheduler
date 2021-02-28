@@ -7,6 +7,18 @@ $(document).ready(function() {
     currentDay.append(currentDate);
     //appending the moment formatting and current time display to that HTML emlement
 
+
+
+    $(".saveBtn").on("click", function () {
+        //this says when any button with the saveBtn class is clicked then:
+       var todo = $(this).siblings(".description").val();
+       //we will take the value from the text areas with the class description
+       var hourID = $(this).parent().attr("id");
+       localStorage.setItem(hourID, todo);
+       console.log(hourID, todo);
+   });
+   
+
     var hourNow = moment().format('HH')
     //this is the currrent hour pulled using moment
     var rightNow = parseInt(hourNow);
@@ -34,24 +46,15 @@ $(document).ready(function() {
             return;
          }
      });
-
-     var hour9v = $('#9todo');
-     var hour10 = $('#10todo');
-     var hour11 = $('#11todo');
-     var hour12 = $('#12todo');
-     var hour1 = $('#1todo');
-     var hour2 = $('#2todo');
-     var hour3 = $('#3todo');
-     var hour4 = $('#4todo');
-     var hour5 = $('#5todo');
-
-    var saveBTN = document.querySelectorAll(".saveBtn");
     
-     var planner ={
-        '9AM' : hour9val.value();
-    }
-    localStorage.setItem('planner', JSON.stringify(planner));
-
-
-  
 });
+
+$("#nine").children('description').val(localStorage.getItem("nine"));
+$("#ten").children('description').val(localStorage.getItem("ten"));
+$("#eleven").children('description').val(localStorage.getItem("eleven"));
+$("#noon").children('description').val(localStorage.getItem("noon"));
+$("#one").children('description').val(localStorage.getItem("one"));
+$("#two").children('description').val(localStorage.getItem("two"));
+$("#three").children('description').val(localStorage.getItem("three"));
+$("#four").children('description').val(localStorage.getItem("four"));
+$("#five").children('description').val(localStorage.getItem("five"));

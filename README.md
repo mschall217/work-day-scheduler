@@ -9,26 +9,16 @@ a simple calendar application that allows a user to save events for each hour of
 
 ## Installation
 
-
+View My Project at https://mschall217.github.io/work-day-scheduler/
 
 ## Usage
 
-Replace the contents of `README.md` with your project's:
-
-- Name
-- Description
-- Installation instructions
-- Usage instructions
-- Support instructions
-- Contributing instructions
-- Licence
-
-Feel free to remove any sections that aren't applicable to your project.
+This is a simple day planer that allows a user to input things they need to do and have them stay on the page while they work through it. The UI is also nice that it will grey out old hours, make the current one pink, and leave the future hours green so the user has those helpful visual ques adding a lot of dynamic to the page. 
 
 ## Support
 
-Please [open an issue](https://github.com/fraction/readme-boilerplate/issues/new) for support.
+Please [open an issue](https://github.com/mschall217/work-day-scheduler/issues) for support.
 
 ## Contributing
 
-Please contribute using [Github Flow](https://guides.github.com/introduction/flow/). Create a branch, add commits, and [open a pull request](https://github.com/fraction/readme-boilerplate/compare/).
+I got a lot of help from my tutor, looking up many things on local storage, and my peers in office hours who help just by bouncing ideas around. 

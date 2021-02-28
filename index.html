@@ -33,9 +33,13 @@
       <!-- Timeblocks go here -->
       <!--Each time block is constructed the same way if I have time I will go back and try to loop them-->
       <div class="row time-block" id="nine"> 
+          <!-- row and timeblock were predefined classes to format the planner -->
           <div class="hour col-md-1"> 9 AM</div>
-          <textarea id="9todo" class="description col-md-10" index="9"></textarea>
+          <!--using boot strap colums to help keep the html in line-->
+          <textarea class="description col-md-10" index="9"></textarea>
+          <!-- description was a predefined class added the boot strap for easy manipulation  -->
           <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
+          <!--there are 12 columns on a bootstrap set up so I used 1 for the time 10 for the input to give the user lots of room and 1 for the button to save -->
       </div>
       <div class="row time-block" id="ten"> 
         <div class="hour col-md-1">10 AM</div>
@@ -77,10 +81,11 @@
         <textarea class="description col-md-10" index="17"></textarea>
         <button class="btn saveBtn col-md-1"><i class="fas fa-save"></i></button>
     </div>
+
     <!--I Started out thinking a table was going to be the best way to approach this but as I worked on it more my javascript
     got increasingly more difficult because the table attributes had their own functionality and layout and it felt like 
     I was just making it so much more complicated especially when we had predefined CSS for rows and the elements-->
-
+<!--Keeping it because I would like to revisit the concept of maybe applying the table since it is more accessability friendly than just a bunch of divs-->
 <!--       
           <tr class="row">
               <td class="col-md-2 hour"> 9  AM</td>

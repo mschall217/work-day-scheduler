@@ -6,16 +6,17 @@ $(document).ready(function() {
     //defining the HTML variable in JavaScript so I can apply moment to change the dates 
     currentDay.append(currentDate);
     //appending the moment formatting and current time display to that HTML emlement
-
-
+    
 
     $(".saveBtn").on("click", function () {
         //this says when any button with the saveBtn class is clicked then:
-       var todo = $(this).siblings(".description").val();
+        var todo = $(this).siblings(".description").val();
        //we will take the value from the text areas with the class description
        var hourID = $(this).parent().attr("id");
+       //this sets them to local storage 
        localStorage.setItem(hourID, todo);
        console.log(hourID, todo);
+       //they log successfully to the console
    });
    
 
@@ -49,12 +50,28 @@ $(document).ready(function() {
     
 });
 
-$("#nine").children('description').val(localStorage.getItem("nine"));
-$("#ten").children('description').val(localStorage.getItem("ten"));
-$("#eleven").children('description').val(localStorage.getItem("eleven"));
-$("#noon").children('description').val(localStorage.getItem("noon"));
-$("#one").children('description').val(localStorage.getItem("one"));
-$("#two").children('description').val(localStorage.getItem("two"));
-$("#three").children('description').val(localStorage.getItem("three"));
-$("#four").children('description').val(localStorage.getItem("four"));
-$("#five").children('description').val(localStorage.getItem("five"));
+var hour9 = $("#nine");
+var hour10 = $("#ten");
+var hour11 = $("#eleven");
+var hour12 = $("#noon");
+var hour1 = $("#one");
+var hour2 = $("#two");
+var hour3 = $("#three");
+var hour4 = $("#four");
+var hour5 = $("#five");
+//assigned the HTML ids to jquery variables 
+
+var userToDo = $('.description');
+
+hour9.children(userToDo).val(localStorage.getItem("nine"));
+hour10.children(userToDo).val(localStorage.getItem("ten"));
+hour11.children(userToDo).val(localStorage.getItem("eleven"));
+hour12.children(userToDo).val(localStorage.getItem("noon"));
+hour1.children(userToDo).val(localStorage.getItem("one"));
+hour2.children(userToDo).val(localStorage.getItem("two"));
+hour3.children(userToDo).val(localStorage.getItem("three"));
+hour4.children(userToDo).val(localStorage.getItem("four"));
+hour5.children(userToDo).val(localStorage.getItem("five"));
+//ALL THHIS TIMEE i forgot the periods to define description as a class...
+//it wasn't recognizing the elemenet I was tagging so it wasn't assigning the values back where they belong
+// assinged the class to a variable so I never have to forget a period again

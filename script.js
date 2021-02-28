@@ -7,40 +7,51 @@ $(document).ready(function() {
     currentDay.append(currentDate);
     //appending the moment formatting and current time display to that HTML emlement
 
-    var nine = $('#9');
-    var ten = $('#10');
-    var eleven = $('#11');
-    var noon = $('#12');
-    var one = $('#13');
-    var two = $('#14');
-    var three = $('#15');
-    var nine = $('#16');
-    var nine = $('#17');
-
-    
-    var rightNow = parseInt(moment().format('HH'));
+    var hourNow = moment().format('HH')
+    //this is the currrent hour pulled using moment
+    var rightNow = parseInt(hourNow);
+    //parsed the current time in order to have a comparable integer to make the conditionals easier
     console.log(rightNow)
      $("textarea").each(function(){
-        var index = parseInt($(this).attr("index"));
-         console.log(index);
-         if( index < rightNow){
+         //by creating an each loop it will go through each text area on the page
+         // I gave each text area an index number based on time (military time) to have a number to compare to the current time
+        var hour = parseInt($(this).attr("index"));
+        //that index needs to be read as a number to properly compare to the current time already parsed above from moment  
+         console.log(hour);
+         if(hour < rightNow){
+             //if the hour on the planner is less than right now it is given the past class in CSS 
             $(this).addClass("past");
             return;
          } 
-         if(index > rightNow){
+         if(hour > rightNow){
+            //if the hour on the planner is more than right now it is given the future class in CSS 
             $(this).addClass("future");
             return;
          }
-         if(index === rightNow){
+         if(hour === rightNow){
+            //if the hour on the planner is equal to right now it is given the past class in CSS 
             $(this).addClass("present");
             return;
          }
      });
 
+     var hour9v = $('#9todo');
+     var hour10 = $('#10todo');
+     var hour11 = $('#11todo');
+     var hour12 = $('#12todo');
+     var hour1 = $('#1todo');
+     var hour2 = $('#2todo');
+     var hour3 = $('#3todo');
+     var hour4 = $('#4todo');
+     var hour5 = $('#5todo');
+
+    var saveBTN = document.querySelectorAll(".saveBtn");
+    
+     var planner ={
+        '9AM' : hour9val.value();
+    }
+    localStorage.setItem('planner', JSON.stringify(planner));
 
 
-
-
-
-
-     })   
+  
+});

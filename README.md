@@ -3,6 +3,7 @@ a simple calendar application that allows a user to save events for each hour of
 ## Table of Contents
 
 - [Installation](#installation)
+- [See it here](#see it here) 
 - [Usage](#usage)
 - [Support](#support)
 - [Contributing](#contributing)
@@ -10,6 +11,10 @@ a simple calendar application that allows a user to save events for each hour of
 ## Installation
 
 View My Project at https://mschall217.github.io/work-day-scheduler/
+
+## See it here
+![Work Day Scheduler](https://user-images.githubusercontent.com/75554590/111885949-17627300-89a1-11eb-95e3-b46ae4da6ea0.gif)
+
 
 ## Usage
 
